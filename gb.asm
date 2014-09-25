@@ -1,7 +1,7 @@
 global _start
 
 section .bss
-    %include "cpu.inc.asm"
+    %include "cpu_states.inc.asm"
 
 section .text
 
