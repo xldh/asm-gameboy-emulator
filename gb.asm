@@ -8,10 +8,16 @@ section .text
     _start:
         %include "memory_fill.inc.asm"
         
-        ; test
+        ; tests read byte
         test_mmu_rb:
-            mov edi, 0xFFFF ; address to read from for rb
+            mov di, 0xFFFF ; address to read from for rb
             call rb
+
+        ; tests read word
+        test_mmu_rw:
+            mov di, 0xFFFE ; address to read from for rb
+            call rw
+
     exit:
         mov rdi, 1
         mov rax, 3ch
@@ -19,4 +25,3 @@ section .text
 
 ; function includes
 %include "mmu.inc.asm"
-
