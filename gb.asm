@@ -23,7 +23,7 @@ section .text
             call rw
 
     exit:
-        mov rdi, 1
+        mov rdi, 0
         mov rax, 3ch
         syscall
 
