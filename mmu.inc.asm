@@ -19,7 +19,7 @@ rb:
 rw:
     push    rbp
     mov     rbp, rsp
-    ; ENTER
+    ; ENTRY POINT
 
     mov     ax, WORD [memory_map + edi]
 
