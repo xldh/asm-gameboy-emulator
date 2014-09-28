@@ -1,11 +1,13 @@
 global _start
 
+; structs includes
+%include "instruction.struct.asm"
+
 section .bss
-    %include "cpu/states.inc.asm"
-    %include "instruction_struct.inc.asm"
+    %include "cpu/states.bss.asm"
 
 section .data
-    %include "cpu/instruction_set.inc.asm"
+    %include "cpu/instruction_set.data.asm"
 
 section .text
 
@@ -28,5 +30,5 @@ section .text
         syscall
 
 ; function includes
-%include "cpu/operations.inc.asm"
-%include "mmu.inc.asm"
+%include "cpu/operations.func.asm"
+%include "mmu.func.asm"
